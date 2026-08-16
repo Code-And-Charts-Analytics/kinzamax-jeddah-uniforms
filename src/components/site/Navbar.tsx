@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/kmax-logo.png";
+import logoAsset from "@/assets/kmax-logo-white.png.asset.json";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -31,15 +31,13 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-10">
         <a href="#top" className="flex items-center gap-3">
-          <span className="flex h-11 items-center rounded-md bg-white px-3">
-            <img
-              src={logo}
-              alt="KINZAMAX KMAX uniform manufacturer logo"
-              width={110}
-              height={32}
-              className="h-6 w-auto"
-            />
-          </span>
+          <img
+            src={logoAsset.url}
+            alt="KINZAMAX KMAX uniform manufacturer logo"
+            width={200}
+            height={106}
+            className="h-14 w-auto"
+          />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
