@@ -77,21 +77,44 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      {
+        title:
+          "Custom Uniform Manufacturer Jeddah | KINZAMAX — Work-Wear Redefined",
+      },
+      {
+        name: "description",
+        content:
+          "Kinzamax is Jeddah's leading custom uniform manufacturer — corporate, industrial, hospitality and healthcare uniforms made in-house.",
+      },
+      { name: "author", content: "Kinzamax — Roshan Zameer Trading Est." },
+      {
+        property: "og:title",
+        content: "KINZAMAX — Custom Uniform Manufacturer, Jeddah",
+      },
+      {
+        property: "og:description",
+        content:
+          "In-house uniform manufacturing in Jeddah: corporate, industrial, hospitality, healthcare.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
