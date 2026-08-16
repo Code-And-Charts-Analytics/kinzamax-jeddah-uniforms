@@ -1,4 +1,4 @@
-import logo from "@/assets/kmax-logo.png";
+import logoAsset from "@/assets/kmax-logo-white.png.asset.json";
 
 const quickLinks = [
   ["About", "#about"],
@@ -15,16 +15,14 @@ export function Footer() {
       <div className="h-[3px] w-full bg-brand-orange" />
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-3 lg:px-10">
         <div>
-          <span className="inline-flex rounded-md bg-white px-3 py-2">
-            <img
-              src={logo}
-              alt="KINZAMAX KMAX logo"
-              loading="lazy"
-              width={140}
-              height={40}
-              className="h-7 w-auto"
-            />
-          </span>
+          <img
+            src={logoAsset.url}
+            alt="KINZAMAX KMAX logo"
+            loading="lazy"
+            width={200}
+            height={106}
+            className="h-16 w-auto"
+          />
           <p className="mt-5 text-sm font-bold tracking-brand text-brand-orange uppercase">
             Work-Wear Redefined
           </p>
