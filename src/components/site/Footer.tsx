@@ -1,19 +1,29 @@
+import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/kmax-logo-white.png.asset.json";
 
-const quickLinks = [
-  ["About", "#about"],
-  ["Products", "#products"],
-  ["Industries", "#industries"],
-  ["Process", "#process"],
-  ["Contact", "#contact"],
-  ["Get a Quote", "#contact"],
+const navigation = [
+  ["Home", "/"],
+  ["Products", "/products"],
+  ["Industries", "/industries"],
+  ["About", "/about"],
+  ["Contact", "/contact"],
+  ["Get a Quote", "/contact"],
+] as const;
+
+const productLinks = [
+  "Industrial Workwear",
+  "Corporate & Office",
+  "Hospitality Uniforms",
+  "Healthcare & Scrubs",
+  "Safety & Hi-Vis",
+  "School Uniforms",
 ];
 
 export function Footer() {
   return (
     <footer className="bg-navy-alt">
       <div className="h-[3px] w-full bg-brand-orange" />
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-3 lg:px-10">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 pt-20 pb-10 md:grid-cols-2 lg:grid-cols-4 lg:px-10">
         <div>
           <img
             src={logoAsset.url}
@@ -21,64 +31,78 @@ export function Footer() {
             loading="lazy"
             width={200}
             height={106}
-            className="h-16 w-auto"
+            className="h-12 w-auto"
           />
-          <p className="mt-5 text-sm font-bold tracking-brand text-brand-orange uppercase">
+          <p className="mt-5 text-[13px] font-bold tracking-brand text-brand-orange uppercase">
             Work-Wear Redefined
           </p>
-          <p className="mt-3 max-w-xs text-sm text-white/60">
-            Custom uniform manufacturing under one roof in Jeddah — corporate,
-            industrial, hospitality and healthcare.
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-stat-label">
+            Premium uniform manufacturing in Jeddah, KSA. Est. 2014.
           </p>
         </div>
 
-        <nav aria-label="Footer">
-          <h2 className="text-xs font-bold tracking-brand text-white uppercase">
-            Quick Links
+        <nav aria-label="Footer navigation">
+          <h2 className="text-xs font-bold tracking-brand text-brand-orange uppercase">
+            Navigation
           </h2>
           <ul className="mt-5 space-y-3">
-            {quickLinks.map(([label, href]) => (
+            {navigation.map(([label, to]) => (
               <li key={label}>
-                <a
-                  href={href}
-                  className="text-sm text-white/60 transition-colors hover:text-brand-orange"
+                <Link
+                  to={to}
+                  className="text-sm text-stat-label transition-colors hover:text-brand-orange"
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
         <div>
-          <h2 className="text-xs font-bold tracking-brand text-white uppercase">
+          <h2 className="text-xs font-bold tracking-brand text-brand-orange uppercase">
+            Products
+          </h2>
+          <ul className="mt-5 space-y-3">
+            {productLinks.map((label) => (
+              <li key={label}>
+                <Link
+                  to="/products"
+                  className="text-sm text-stat-label transition-colors hover:text-brand-orange"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-xs font-bold tracking-brand text-brand-orange uppercase">
             Contact
           </h2>
-          <ul className="mt-5 space-y-3 text-sm text-white/60">
-            <li>Gharnatah Street, Mishrifah District, Aziziyah, Jeddah 23342, KSA</li>
+          <ul className="mt-5 space-y-3 text-sm text-stat-label">
+            <li>📍 Jeddah, KSA</li>
             <li>
               <a href="tel:+966530717861" className="hover:text-brand-orange">
-                +966 53 071 7861
+                📞 +966 53 071 7861
               </a>
             </li>
             <li>
               <a href="mailto:info@kinzamax.com" className="hover:text-brand-orange">
-                info@kinzamax.com
+                ✉ info@kinzamax.com
               </a>
             </li>
-            <li>www.kinzamax.com</li>
+            <li>🌐 kinzamax.com</li>
             <li>VAT: 300486407700003</li>
           </ul>
         </div>
       </div>
 
-      <div className="bg-navy">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-center text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between lg:px-10">
-          <p>
-            © 2026 Kinzamax — Roshan Zameer Trading Est. · VAT: 300486407700003 ·
-            Jeddah, KSA
-          </p>
-          <p className="text-brand-orange">kinzamax.com</p>
+      <div className="border-t border-navy">
+        <div className="mx-auto max-w-7xl px-5 py-6 text-center text-xs text-stat-label lg:px-10">
+          © 2026 Kinzamax — Roshan Zameer Trading Est. · Jeddah, Saudi Arabia · All
+          Rights Reserved
         </div>
       </div>
     </footer>
