@@ -55,10 +55,7 @@ export function ImagePlaceholder({
     <div
       role="img"
       aria-label={label}
-      className={cn(
-        "flex items-center justify-center border-[3px] border-brand-orange bg-navy-alt p-6 text-center",
-        className,
-      )}
+      className={cn("placeholder-box", className)}
     >
       <span className="text-xs font-bold tracking-brand text-brand-orange uppercase sm:text-sm">
         {label}
