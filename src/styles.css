@@ -204,6 +204,51 @@ html {
   letter-spacing: 0.18em;
 }
 
+@utility tracking-wide-brand {
+  letter-spacing: 0.09em;
+}
+
+@utility pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+}
+
+@utility placeholder-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--navy-card);
+  border: 2px dashed var(--brand-orange);
+}
+
+@keyframes kmax-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: kmax-marquee 38s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 @keyframes kmax-fade-up {
   from {
     opacity: 0;
