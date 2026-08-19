@@ -1,36 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Navbar } from "@/components/site/Navbar";
-import { Hero } from "@/components/site/Hero";
+import { SiteLayout } from "@/components/site/Layout";
+import { Marquee, StatsBar, CtaBanner } from "@/components/site/Blocks";
 import {
-  StatsBar,
-  About,
-  Products,
+  Hero,
+  AboutStrip,
+  ProductsPreview,
+  WhyKinzamax,
   Customization,
   Process,
-  Industries,
-  WhyKinzamax,
-} from "@/components/site/Sections";
-import { QuoteSection } from "@/components/site/QuoteForm";
-import { Footer } from "@/components/site/Footer";
-import { Toaster } from "@/components/ui/sonner";
+  IndustriesStrip,
+  LifestyleStrip,
+} from "@/components/site/HomeSections";
 
-const TITLE =
-  "Custom Uniform Manufacturer Jeddah | KINZAMAX — Work-Wear Redefined";
+const TITLE = "Custom Uniform Manufacturer Jeddah | KINZAMAX";
 const DESCRIPTION =
-  "Kinzamax is Jeddah's leading custom uniform manufacturer. Corporate, industrial, hospitality & healthcare uniforms. In-house production, embroidery, printing. Get a quote today.";
+  "Kinzamax is Jeddah's leading custom uniform manufacturer. Corporate, industrial, hospitality and healthcare uniforms. In-house production, embroidery and printing. Get a quote in 24 hours.";
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Kinzamax — Roshan Zameer Trading Est.",
-  alternateName: "KINZAMAX",
+  name: "Kinzamax",
+  alternateName: "Roshan Zameer Trading Est.",
   description: DESCRIPTION,
-  url: "https://www.kinzamax.com",
+  url: "https://kinzamax.com",
   telephone: "+966530717861",
   email: "info@kinzamax.com",
   foundingDate: "2014",
   vatID: "300486407700003",
-  taxID: "300486407700003",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Gharnatah Street, Mishrifah District, Aziziyah",
@@ -49,14 +45,12 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://www.kinzamax.com/" }],
+    links: [{ rel: "canonical", href: "/" }],
     scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(schema),
-      },
+      { type: "application/ld+json", children: JSON.stringify(schema) },
     ],
   }),
   component: Index,
@@ -64,21 +58,18 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="bg-background text-body-text">
-      <Navbar />
-      <main>
-        <Hero />
-        <StatsBar />
-        <About />
-        <Products />
-        <Customization />
-        <Process />
-        <Industries />
-        <WhyKinzamax />
-        <QuoteSection />
-      </main>
-      <Footer />
-      <Toaster />
-    </div>
+    <SiteLayout>
+      <Hero />
+      <Marquee />
+      <StatsBar />
+      <AboutStrip />
+      <ProductsPreview />
+      <WhyKinzamax />
+      <Customization />
+      <Process />
+      <IndustriesStrip />
+      <LifestyleStrip />
+      <CtaBanner />
+    </SiteLayout>
   );
 }
