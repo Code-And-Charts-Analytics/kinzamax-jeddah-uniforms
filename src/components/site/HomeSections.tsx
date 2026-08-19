@@ -188,7 +188,7 @@ export function ProductsPreview() {
   );
 }
 
-const reasons = [
+const reasons: [string, string][] = [
   [
     "✓ 100% In-House Manufacturing",
     "No middlemen. We own every step. This means faster turnaround and tighter quality than any importer.",
@@ -245,7 +245,7 @@ export function WhyKinzamax() {
   );
 }
 
-const customization = [
+const customization: [string, string][] = [
   ["Custom Sizing", "XS to 6XL"],
   ["Fabric Selection", "Twill, drill, pique, dri-fit, FR-grade"],
   ["Color Matching", "Any Pantone or RAL"],
@@ -292,7 +292,7 @@ export function Customization() {
   );
 }
 
-const steps = [
+const steps: [string, string, string][] = [
   ["01", "Enquiry & Specs", "Share requirements — type, quantity, sizes, logo files, colors, timeline"],
   ["02", "Official Quotation", "Formal PDF quotation with full pricing breakdown within 24 hours"],
   ["03", "Digital Mockup", "Full design preview on the garment — approved before production begins"],
@@ -376,11 +376,11 @@ export function IndustriesStrip() {
 export function LifestyleStrip() {
   return (
     <section className="grid grid-cols-1 sm:grid-cols-3">
-      {[
+      {([
         ["LIFESTYLE_1", "Worker in coverall, real environment"],
         ["LIFESTYLE_2", "Chef in kitchen, real environment"],
         ["LIFESTYLE_3", "Corporate worker, office environment"],
-      ].map(([label, alt]) => (
+      ] as const).map(([label, alt]) => (
         <div key={label} className="relative h-[400px]">
           <ImagePlaceholder label={label} className="h-full w-full" />
           <div

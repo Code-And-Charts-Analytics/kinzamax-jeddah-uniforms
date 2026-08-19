@@ -25,7 +25,7 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const details = [
+const details: [string,string][] = [
   [
     "Address",
     "Gharnatah Street, Mishrifah District\nAziziyah, Jeddah 23342\nKingdom of Saudi Arabia",

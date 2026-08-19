@@ -26,7 +26,7 @@ export const Route = createFileRoute("/products")({
   component: ProductsPage,
 });
 
-const specsBanner = [
+const specsBanner: [string,string][] = [
   ["🧵", "Triple Stitched"],
   ["📏", "Anti-Shrink Guaranteed"],
   ["✅", "ISO Compliant"],
