@@ -11,6 +11,7 @@ import {
   IndustriesStrip,
   LifestyleStrip,
 } from "@/components/site/HomeSections";
+import { ClientsSection } from "@/components/site/Clients";
 
 const TITLE = "Custom Uniform Manufacturer Jeddah | KINZAMAX";
 const DESCRIPTION =
@@ -68,6 +69,7 @@ function Index() {
       <Customization />
       <Process />
       <IndustriesStrip />
+      <ClientsSection />
       <LifestyleStrip />
       <CtaBanner />
     </SiteLayout>

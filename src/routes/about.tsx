@@ -7,6 +7,7 @@ import {
   SectionTag,
 } from "@/components/site/Blocks";
 import { Reveal, ImagePlaceholder } from "@/components/site/Reveal";
+import { ClientsSection } from "@/components/site/Clients";
 
 const TITLE = "About Us — Jeddah Uniform Manufacturer | KINZAMAX";
 const DESCRIPTION =
@@ -139,24 +140,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-background py-[60px]">
-        <div className="mx-auto max-w-7xl px-5 lg:px-10">
-          <h2 className="heading-xl text-center text-2xl text-navy uppercase">
-            Standards We Meet
-          </h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {certifications.map(([name, detail]) => (
-              <div
-                key={name}
-                className="border border-navy bg-bg-light p-6 text-center"
-              >
-                <div className="text-sm font-bold text-navy">{name}</div>
-                <div className="mt-2 text-xs text-muted-text">{detail}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ClientsSection />
 
       <section className="bg-bg-light py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-10">
