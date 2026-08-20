@@ -1,3 +1,19 @@
+import heroPolo from "@/assets/hero-polo.jpg.asset.json";
+import lineup from "@/assets/garment-lineup.jpg.asset.json";
+import stitch from "@/assets/stitch-macro.jpg.asset.json";
+import badge from "@/assets/badge-stitching.jpg.asset.json";
+import flatlay from "@/assets/collection-flatlay.jpg.asset.json";
+import factory from "@/assets/factory-floor.jpg.asset.json";
+
+export const images = {
+  heroPolo: heroPolo.url,
+  lineup: lineup.url,
+  stitch: stitch.url,
+  badge: badge.url,
+  flatlay: flatlay.url,
+  factory: factory.url,
+};
+
 export const products = [
   {
     category: "Industrial",
@@ -6,6 +22,7 @@ export const products = [
       "Heavy-duty workwear coverall with multi-pocket construction, reflective strips, and reinforced stitching. Available in any color.",
     specs: ["300GSM Twill", "XS-6XL", "7-14 days"],
     placeholder: "PRODUCT_INDUSTRIAL_COVERALL",
+    image: images.lineup,
   },
   {
     category: "Corporate",
@@ -14,6 +31,7 @@ export const products = [
       "Premium pique or dri-fit polo with custom embroidery badge. Any Pantone color. Perfect for office and reception teams.",
     specs: ["220GSM Pique", "XS-6XL", "7-10 days"],
     placeholder: "PRODUCT_CORPORATE_POLO",
+    image: images.heroPolo,
   },
   {
     category: "Hospitality",
@@ -22,6 +40,7 @@ export const products = [
       "Double-breasted chef jacket with piping detail and button options. Cotton or poly blend. Name embroidery available.",
     specs: ["240GSM Cotton", "XS-4XL", "7-10 days"],
     placeholder: "PRODUCT_CHEF_JACKET",
+    image: images.flatlay,
   },
   {
     category: "Healthcare",
@@ -30,6 +49,7 @@ export const products = [
       "V-neck scrub top and matching trousers. Antimicrobial fabric option. Color-coded by department. Moisture-wicking.",
     specs: ["200GSM Poly-Cotton", "XS-6XL", "7-10 days"],
     placeholder: "PRODUCT_MEDICAL_SCRUBS",
+    image: images.flatlay,
   },
   {
     category: "Safety",
@@ -38,6 +58,7 @@ export const products = [
       "EN 471 and SASO compliant hi-visibility vest with reflective strips, multiple pockets, and KMAX branded label.",
     specs: ["120GSM Polyester", "S-4XL", "5-7 days"],
     placeholder: "PRODUCT_HIVIS_VEST",
+    image: images.flatlay,
   },
   {
     category: "Healthcare",
@@ -46,6 +67,7 @@ export const products = [
       "Full-length white lab coat with four pockets, button front, and custom embroidery. Cotton or poly blend.",
     specs: ["200GSM Cotton", "XS-4XL", "7-10 days"],
     placeholder: "PRODUCT_LAB_COAT",
+    image: images.lineup,
   },
   {
     category: "Education",
@@ -54,6 +76,7 @@ export const products = [
       "Full school uniform program — shirts, trousers, skirts, blazers, PE kits. Embroidered school crest. Bulk pricing.",
     specs: ["180GSM Poly-Cotton", "4yr-Adult", "10-14 days"],
     placeholder: "PRODUCT_SCHOOL_UNIFORM",
+    image: images.factory,
   },
   {
     category: "Security",
@@ -62,6 +85,7 @@ export const products = [
       "Formal dark navy security jacket with epaulettes, badge panel, and brass buttons. Professional and authoritative.",
     specs: ["260GSM Twill", "S-4XL", "10-14 days"],
     placeholder: "PRODUCT_SECURITY_JACKET",
+    image: images.heroPolo,
   },
 ];
 
@@ -89,6 +113,7 @@ export const industries = [
       "Spa and wellness teams",
     ],
     placeholder: "INDUSTRY_HOTELS",
+    image: images.flatlay,
   },
   {
     emoji: "🏥",
@@ -103,6 +128,7 @@ export const industries = [
       "Color-coded department system",
     ],
     placeholder: "INDUSTRY_HOSPITALS",
+    image: images.lineup,
   },
   {
     emoji: "🏭",
@@ -116,6 +142,7 @@ export const industries = [
       "SASO compliant PPE",
     ],
     placeholder: "INDUSTRY_CONSTRUCTION",
+    image: images.factory,
   },
   {
     emoji: "🏢",
@@ -130,6 +157,7 @@ export const industries = [
       "Custom embroidery standard",
     ],
     placeholder: "INDUSTRY_CORPORATE",
+    image: images.heroPolo,
   },
   {
     emoji: "🍽",
@@ -143,6 +171,7 @@ export const industries = [
       "Complete team uniform sets",
     ],
     placeholder: "INDUSTRY_RESTAURANTS",
+    image: images.badge,
   },
   {
     emoji: "🎓",
@@ -156,5 +185,6 @@ export const industries = [
       "Bulk pricing available",
     ],
     placeholder: "INDUSTRY_SCHOOLS",
+    image: images.stitch,
   },
 ];
