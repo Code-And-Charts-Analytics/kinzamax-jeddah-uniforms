@@ -75,6 +75,8 @@ function ProductsPage() {
                 <div className="h-[3px] w-full bg-brand-orange" />
                 <ImagePlaceholder
                   label={product.placeholder}
+                  src={product.image}
+                  alt={product.name}
                   className="h-52 w-full border-x-0 border-t-0"
                 />
                 <div className="flex flex-1 flex-col p-6">

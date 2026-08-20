@@ -43,6 +43,8 @@ function IndustriesPage() {
                 <div className="grid items-center gap-10 lg:grid-cols-2">
                   <ImagePlaceholder
                     label={industry.placeholder}
+                    src={industry.image}
+                    alt={industry.name}
                     className={cn(
                       "h-[380px] w-full",
                       imageRight && "lg:order-2",
