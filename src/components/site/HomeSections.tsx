@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Reveal, ImagePlaceholder } from "./Reveal";
 import { SectionTag } from "./Blocks";
-import { products, industries } from "@/lib/site-data";
+import { products, industries, images } from "@/lib/site-data";
 
 export function Hero() {
   return (
@@ -50,6 +50,8 @@ export function Hero() {
         <div className="min-h-[340px] bg-navy p-5 lg:min-h-full lg:p-6">
           <ImagePlaceholder
             label="HERO_MAIN"
+            src={images.heroPolo}
+            alt="Folded navy KINZAMAX corporate polo with woven brand label"
             className="h-full min-h-[300px] w-full"
           />
         </div>
@@ -109,6 +111,8 @@ export function AboutStrip() {
           <Reveal delay={120}>
             <ImagePlaceholder
               label="ABOUT_FACTORY"
+              src={images.factory}
+              alt="KINZAMAX production floor in Jeddah"
               className="h-80 w-full lg:h-full lg:min-h-[420px]"
             />
           </Reveal>
@@ -153,6 +157,8 @@ export function ProductsPreview() {
                 <div className="h-[3px] w-full bg-brand-orange" />
                 <ImagePlaceholder
                   label={product.placeholder}
+                  src={product.image}
+                  alt={product.name}
                   className="h-44 w-full border-x-0 border-t-0"
                 />
                 <div className="flex flex-1 flex-col p-6">
@@ -284,6 +290,8 @@ export function Customization() {
         <div className="bg-navy p-5 lg:p-6">
           <ImagePlaceholder
             label="CUSTOM_EMBROIDERY"
+            src={images.stitch}
+            alt="Orange contrast stitching and woven KMAX label"
             className="h-72 w-full lg:h-full lg:min-h-[520px]"
           />
         </div>
@@ -377,12 +385,12 @@ export function LifestyleStrip() {
   return (
     <section className="grid grid-cols-1 sm:grid-cols-3">
       {([
-        ["LIFESTYLE_1", "Worker in coverall, real environment"],
-        ["LIFESTYLE_2", "Chef in kitchen, real environment"],
-        ["LIFESTYLE_3", "Corporate worker, office environment"],
-      ] as const).map(([label, alt]) => (
+        ["LIFESTYLE_1", "Uniform range: polo, coverall and chef jacket", images.lineup],
+        ["LIFESTYLE_2", "Hand-stitched KINZAMAX badge on a navy coverall", images.badge],
+        ["LIFESTYLE_3", "Full KINZAMAX uniform collection flat lay", images.flatlay],
+      ] as const).map(([label, alt, src]) => (
         <div key={label} className="relative h-[400px]">
-          <ImagePlaceholder label={label} className="h-full w-full" />
+          <ImagePlaceholder label={label} src={src} alt={alt} className="h-full w-full" />
           <div
             aria-label={alt}
             className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-alt to-transparent"

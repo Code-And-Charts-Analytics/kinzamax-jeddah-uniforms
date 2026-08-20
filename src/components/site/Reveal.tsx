@@ -47,10 +47,31 @@ export function Reveal({
 export function ImagePlaceholder({
   label,
   className,
+  src,
+  alt,
+  imgClassName,
 }: {
   label: string;
   className?: string;
+  src?: string;
+  alt?: string;
+  imgClassName?: string;
 }) {
+  if (src) {
+    return (
+      <div className={cn("overflow-hidden bg-navy-alt", className)}>
+        <img
+          src={src}
+          alt={alt ?? label}
+          loading="lazy"
+          className={cn(
+            "h-full w-full object-cover transition-transform duration-700 hover:scale-[1.04]",
+            imgClassName,
+          )}
+        />
+      </div>
+    );
+  }
   return (
     <div
       role="img"
