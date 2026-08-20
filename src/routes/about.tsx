@@ -47,13 +47,6 @@ const capabilitiesRight = [
   "Net 30 Corporate Terms",
 ];
 
-const certifications: [string,string][] = [
-  ["ISO 11612", "Flame Resistant Fabric"],
-  ["EN 471", "Hi-Vis Standard"],
-  ["SASO", "Saudi Standards Compliant"],
-  ["Triple Stitch", "Construction Standard"],
-  ["Grade 4-5", "Color Fastness Rating"],
-];
 
 const facilities: [string,string,string][] = [
   [
