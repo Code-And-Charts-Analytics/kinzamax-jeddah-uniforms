@@ -1,4 +1,5 @@
 import heroPolo from "@/assets/hero-polo.jpg.asset.json";
+import heroKnolling from "@/assets/hero-knolling.jpg.asset.json";
 import lineup from "@/assets/garment-lineup.jpg.asset.json";
 import stitch from "@/assets/stitch-macro.jpg.asset.json";
 import badge from "@/assets/badge-stitching.jpg.asset.json";
@@ -7,6 +8,7 @@ import factory from "@/assets/factory-floor.jpg.asset.json";
 
 export const images = {
   heroPolo: heroPolo.url,
+  heroKnolling: heroKnolling.url,
   lineup: lineup.url,
   stitch: stitch.url,
   badge: badge.url,

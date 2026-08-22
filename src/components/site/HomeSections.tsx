@@ -7,51 +7,58 @@ export function Hero() {
   return (
     <section className="relative">
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-[55%_45%]">
-        <div className="relative flex flex-col justify-center bg-navy pattern-diagonal px-6 pt-32 pb-20 sm:px-10 lg:px-16">
-          <SectionTag>Jeddah · Est. 2014</SectionTag>
-          <h1 className="heading-xl mt-6 text-5xl uppercase sm:text-6xl xl:text-7xl">
+        <div className="relative flex flex-col justify-center bg-navy-alt pattern-diagonal px-6 pt-32 pb-16 sm:px-10 lg:px-16">
+          <p className="text-xs font-bold tracking-[2px] text-brand-orange uppercase">
+            Jeddah, KSA · Est. 1977 · 47+ Years Heritage
+          </p>
+          <h1 className="heading-xl mt-6 text-5xl uppercase sm:text-6xl xl:text-[68px]">
             <span className="block text-white">Work-Wear</span>
-            <span className="block text-brand-orange">Redefined.</span>
+            <span className="block text-brand-orange">Engineered.</span>
           </h1>
-          <p className="mt-7 max-w-lg text-base leading-[1.8] text-white/60">
-            Kinzamax manufactures premium corporate, industrial, hospitality, and
-            healthcare uniforms — 100% in-house in Jeddah. Every thread, your brand.
+          <p className="mt-7 max-w-lg text-base leading-[1.8] text-bg-mid/85">
+            Saudi Arabia's premier manufacturer of industrial, healthcare,
+            corporate, and hospitality workwear. In-house bulk production scaled
+            from 100 to 100,000+ units.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <Link
-              to="/products"
-              className="bg-brand-orange px-8 py-4 text-center text-sm font-bold tracking-wide-brand text-white uppercase transition-opacity hover:opacity-90"
+              to="/contact"
+              className="bg-brand-orange px-7 py-4 text-center text-sm font-bold tracking-[1.5px] text-white uppercase transition-opacity hover:opacity-90"
             >
-              View Our Products
+              Request Free Sample Kit →
             </Link>
             <Link
-              to="/contact"
-              className="border border-white px-8 py-4 text-center text-sm font-bold tracking-wide-brand text-white uppercase transition-colors hover:bg-white hover:text-navy"
+              to="/products"
+              className="border border-white px-7 py-4 text-center text-sm font-bold tracking-[1.5px] text-white uppercase transition-colors hover:bg-white hover:text-navy-alt"
             >
-              Get a Quote
+              Download 2026 Catalogue
             </Link>
           </div>
-          <div className="mt-12 flex flex-wrap items-center gap-5 text-sm text-white">
+          <div className="mt-12 flex flex-wrap items-center gap-5">
             {[
-              ["10+", "Years"],
-              ["500+", "Orders"],
-              ["100%", "In-House"],
+              ["47+", "Years Heritage"],
+              ["500k+", "Garments Delivered"],
+              ["100%", "In-House Jeddah Plant"],
             ].map(([value, label], i) => (
               <div key={label} className="flex items-center gap-5">
-                {i > 0 && <span className="h-5 w-px bg-brand-orange" />}
-                <span>
-                  <span className="font-bold text-brand-orange">{value}</span>{" "}
-                  {label}
+                {i > 0 && <span className="h-8 w-px bg-brand-orange" />}
+                <span className="flex flex-col">
+                  <span className="text-lg font-bold text-brand-orange">
+                    {value}
+                  </span>
+                  <span className="text-[11px] tracking-[1.5px] text-muted-text uppercase">
+                    {label}
+                  </span>
                 </span>
               </div>
             ))}
           </div>
         </div>
-        <div className="min-h-[340px] bg-navy p-5 lg:min-h-full lg:p-6">
+        <div className="min-h-[340px] bg-navy lg:min-h-full">
           <ImagePlaceholder
-            label="HERO_MAIN"
-            src={images.heroPolo}
-            alt="Folded navy KINZAMAX corporate polo with woven brand label"
+            label="HERO_MAIN_IMAGE"
+            src={images.heroKnolling}
+            alt="Flat lay knolling of KINZAMAX multi-sector workwear — coverall, scrubs, polo and chef jacket with tailoring tools"
             className="h-full min-h-[300px] w-full"
           />
         </div>
