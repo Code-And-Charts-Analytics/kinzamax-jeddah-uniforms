@@ -297,8 +297,8 @@ export function Customization() {
         <div className="bg-navy p-5 lg:p-6">
           <ImagePlaceholder
             label="CUSTOM_EMBROIDERY"
-            src={images.stitch}
-            alt="Orange contrast stitching and woven KMAX label"
+            src={images.stitchTriple}
+            alt="Triple orange contrast stitching on navy fabric"
             className="h-72 w-full lg:h-full lg:min-h-[520px]"
           />
         </div>
@@ -393,7 +393,7 @@ export function LifestyleStrip() {
     <section className="grid grid-cols-1 sm:grid-cols-3">
       {([
         ["LIFESTYLE_1", "Uniform range: polo, coverall and chef jacket", images.lineup],
-        ["LIFESTYLE_2", "Hand-stitched KINZAMAX badge on a navy coverall", images.badge],
+        ["LIFESTYLE_2", "Woven KMAX label with orange stitch detail", images.kmaxLabel],
         ["LIFESTYLE_3", "Full KINZAMAX uniform collection flat lay", images.flatlay],
       ] as const).map(([label, alt, src]) => (
         <div key={label} className="relative h-[400px]">

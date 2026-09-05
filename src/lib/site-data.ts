@@ -5,6 +5,16 @@ import stitch from "@/assets/stitch-macro.jpg.asset.json";
 import badge from "@/assets/badge-stitching.jpg.asset.json";
 import flatlay from "@/assets/collection-flatlay.jpg.asset.json";
 import factory from "@/assets/factory-floor.jpg.asset.json";
+import chefJacket from "@/assets/product-chef-jacket.jpg.asset.json";
+import hivisVest from "@/assets/product-hivis-vest.jpg.asset.json";
+import labCoat from "@/assets/product-lab-coat.jpg.asset.json";
+import securityJacket from "@/assets/product-security-jacket.jpg.asset.json";
+import stitchTriple from "@/assets/stitch-triple-macro.jpg.asset.json";
+import kmaxLabel from "@/assets/kmax-label-macro.jpg.asset.json";
+import nurseScrubs from "@/assets/lifestyle-nurse-scrubs.jpg.asset.json";
+import doctorLabcoat from "@/assets/lifestyle-doctor-labcoat.jpg.asset.json";
+import corporatePolo from "@/assets/lifestyle-corporate-polo.jpg.asset.json";
+import restaurantStaff from "@/assets/lifestyle-restaurant-staff.jpg.asset.json";
 
 export const images = {
   heroPolo: heroPolo.url,
@@ -14,6 +24,16 @@ export const images = {
   badge: badge.url,
   flatlay: flatlay.url,
   factory: factory.url,
+  chefJacket: chefJacket.url,
+  hivisVest: hivisVest.url,
+  labCoat: labCoat.url,
+  securityJacket: securityJacket.url,
+  stitchTriple: stitchTriple.url,
+  kmaxLabel: kmaxLabel.url,
+  nurseScrubs: nurseScrubs.url,
+  doctorLabcoat: doctorLabcoat.url,
+  corporatePolo: corporatePolo.url,
+  restaurantStaff: restaurantStaff.url,
 };
 
 export const products = [
@@ -42,7 +62,7 @@ export const products = [
       "Double-breasted chef jacket with piping detail and button options. Cotton or poly blend. Name embroidery available.",
     specs: ["240GSM Cotton", "XS-4XL", "7-10 days"],
     placeholder: "PRODUCT_CHEF_JACKET",
-    image: images.flatlay,
+    image: images.chefJacket,
   },
   {
     category: "Healthcare",
@@ -51,7 +71,7 @@ export const products = [
       "V-neck scrub top and matching trousers. Antimicrobial fabric option. Color-coded by department. Moisture-wicking.",
     specs: ["200GSM Poly-Cotton", "XS-6XL", "7-10 days"],
     placeholder: "PRODUCT_MEDICAL_SCRUBS",
-    image: images.flatlay,
+    image: images.nurseScrubs,
   },
   {
     category: "Safety",
@@ -60,7 +80,7 @@ export const products = [
       "EN 471 and SASO compliant hi-visibility vest with reflective strips, multiple pockets, and KMAX branded label.",
     specs: ["120GSM Polyester", "S-4XL", "5-7 days"],
     placeholder: "PRODUCT_HIVIS_VEST",
-    image: images.flatlay,
+    image: images.hivisVest,
   },
   {
     category: "Healthcare",
@@ -69,7 +89,7 @@ export const products = [
       "Full-length white lab coat with four pockets, button front, and custom embroidery. Cotton or poly blend.",
     specs: ["200GSM Cotton", "XS-4XL", "7-10 days"],
     placeholder: "PRODUCT_LAB_COAT",
-    image: images.lineup,
+    image: images.labCoat,
   },
   {
     category: "Education",
@@ -87,7 +107,7 @@ export const products = [
       "Formal dark navy security jacket with epaulettes, badge panel, and brass buttons. Professional and authoritative.",
     specs: ["260GSM Twill", "S-4XL", "10-14 days"],
     placeholder: "PRODUCT_SECURITY_JACKET",
-    image: images.heroPolo,
+    image: images.securityJacket,
   },
 ];
 
@@ -130,7 +150,7 @@ export const industries = [
       "Color-coded department system",
     ],
     placeholder: "INDUSTRY_HOSPITALS",
-    image: images.lineup,
+    image: images.doctorLabcoat,
   },
   {
     emoji: "🏭",
@@ -159,7 +179,7 @@ export const industries = [
       "Custom embroidery standard",
     ],
     placeholder: "INDUSTRY_CORPORATE",
-    image: images.heroPolo,
+    image: images.corporatePolo,
   },
   {
     emoji: "🍽",
@@ -173,7 +193,7 @@ export const industries = [
       "Complete team uniform sets",
     ],
     placeholder: "INDUSTRY_RESTAURANTS",
-    image: images.badge,
+    image: images.restaurantStaff,
   },
   {
     emoji: "🎓",
