@@ -5,68 +5,88 @@ import { products, industries, images } from "@/lib/site-data";
 
 export function Hero() {
   return (
-    <section className="relative">
-      <div className="grid min-h-screen grid-cols-1 lg:grid-cols-[55%_45%]">
-        <div className="relative flex flex-col justify-center bg-navy-alt pattern-diagonal px-6 pt-32 pb-16 sm:px-10 lg:px-16">
-          <p className="text-xs font-bold tracking-[2px] text-brand-orange uppercase">
-            Jeddah, KSA · Est. 1977 · 47+ Years Heritage
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-navy-alt pt-32 pb-14">
+      {/* geometric field */}
+      <div className="pattern-diagonal pointer-events-none absolute inset-0" />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.16]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,.18) 1px, transparent 1px)",
+          backgroundSize: "12.5% 100%",
+        }}
+      />
+      <div className="pointer-events-none absolute -top-24 -right-24 h-[520px] w-[520px] rotate-45 border border-brand-orange/25" />
+      <div className="pointer-events-none absolute -bottom-40 -left-24 h-[420px] w-[420px] rotate-12 border border-sky/20" />
+      <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none text-center text-[26vw] leading-none font-extrabold tracking-tighter text-white/[0.028] uppercase">
+        Kinzamax
+      </div>
+
+      <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-10">
+        <div className="flex items-center gap-4">
+          <span className="h-px w-12 bg-brand-orange" />
+          <p className="text-[11px] font-bold tracking-[3px] text-brand-orange uppercase">
+            Jeddah, KSA · Est. 1977 · 47 Years of Craft
           </p>
-          <h1 className="heading-xl mt-6 text-5xl uppercase sm:text-6xl xl:text-[68px]">
-            <span className="block text-white">Work-Wear</span>
-            <span className="block text-brand-orange">Engineered.</span>
-          </h1>
-          <p className="mt-7 max-w-lg text-base leading-[1.8] text-bg-mid/85">
+        </div>
+
+        <h1 className="heading-xl mt-8 text-[52px] uppercase sm:text-[80px] lg:text-[112px] xl:text-[128px]">
+          <span className="block text-white">Work-Wear</span>
+          <span className="block text-transparent [-webkit-text-stroke:1.5px_var(--brand-orange)]">
+            Redefined
+          </span>
+        </h1>
+
+        <div className="mt-10 grid gap-10 border-t border-white/10 pt-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+          <p className="max-w-xl text-base leading-[1.9] text-bg-mid/80">
             Saudi Arabia's premier manufacturer of industrial, healthcare,
-            corporate, and hospitality workwear. In-house bulk production scaled
-            from 100 to 100,000+ units.
+            corporate and hospitality uniforms. Cut, stitched, embroidered and
+            finished in our own Jeddah plant — from 100 to 100,000+ units.
           </p>
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+          <div className="flex flex-col gap-4 sm:flex-row lg:justify-end">
             <Link
               to="/contact"
-              className="bg-brand-orange px-7 py-4 text-center text-sm font-bold tracking-[1.5px] text-white uppercase transition-opacity hover:opacity-90"
+              className="group relative overflow-hidden bg-brand-orange px-8 py-4 text-center text-sm font-bold tracking-[1.5px] text-white uppercase"
             >
-              Request Free Sample Kit →
+              <span className="relative z-10">Request Free Sample Kit →</span>
+              <span className="absolute inset-0 -translate-x-full bg-navy transition-transform duration-300 group-hover:translate-x-0" />
             </Link>
             <Link
               to="/products"
-              className="border border-white px-7 py-4 text-center text-sm font-bold tracking-[1.5px] text-white uppercase transition-colors hover:bg-white hover:text-navy-alt"
+              className="border border-white/40 px-8 py-4 text-center text-sm font-bold tracking-[1.5px] text-white uppercase transition-colors hover:border-white hover:bg-white hover:text-navy-alt"
             >
-              Download 2026 Catalogue
+              View the Collection
             </Link>
           </div>
-          <div className="mt-12 flex flex-wrap items-center gap-5">
-            {[
-              ["47+", "Years Heritage"],
-              ["500k+", "Garments Delivered"],
-              ["100%", "In-House Jeddah Plant"],
-            ].map(([value, label], i) => (
-              <div key={label} className="flex items-center gap-5">
-                {i > 0 && <span className="h-8 w-px bg-brand-orange" />}
-                <span className="flex flex-col">
-                  <span className="text-lg font-bold text-brand-orange">
-                    {value}
-                  </span>
-                  <span className="text-[11px] tracking-[1.5px] text-muted-text uppercase">
-                    {label}
-                  </span>
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
-        <div className="min-h-[340px] bg-navy lg:min-h-full">
-          <ImagePlaceholder
-            label="HERO_MAIN_IMAGE"
-            src={images.heroKnolling}
-            alt="Flat lay knolling of KINZAMAX multi-sector workwear — coverall, scrubs, polo and chef jacket with tailoring tools"
-            className="h-full min-h-[300px] w-full"
-          />
+
+        <div className="mt-14 grid grid-cols-2 border-t border-white/10 lg:grid-cols-4">
+          {[
+            ["47+", "Years Heritage"],
+            ["500k+", "Garments Delivered"],
+            ["100%", "In-House Jeddah Plant"],
+            ["7–14", "Days Turnaround"],
+          ].map(([value, label]) => (
+            <div
+              key={label}
+              className="border-b border-white/10 py-6 pr-6 lg:border-r lg:border-b-0 lg:pl-6 lg:first:pl-0"
+            >
+              <span className="block text-3xl font-bold text-brand-orange">
+                {value}
+              </span>
+              <span className="mt-2 block text-[11px] tracking-[2px] text-stat-label uppercase">
+                {label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="h-[3px] w-full bg-brand-orange" />
+
+      <div className="absolute bottom-0 left-0 h-[3px] w-full bg-brand-orange" />
     </section>
   );
 }
+
 
 const pillars = [
   {
