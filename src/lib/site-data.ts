@@ -15,6 +15,9 @@ import nurseScrubs from "@/assets/lifestyle-nurse-scrubs.jpg.asset.json";
 import doctorLabcoat from "@/assets/lifestyle-doctor-labcoat.jpg.asset.json";
 import corporatePolo from "@/assets/lifestyle-corporate-polo.jpg.asset.json";
 import restaurantStaff from "@/assets/lifestyle-restaurant-staff.jpg.asset.json";
+import industryHotels from "@/assets/industry-hotels.jpg.asset.json";
+import industrySchools from "@/assets/industry-schools.jpg.asset.json";
+import industryConstruction from "@/assets/industry-construction.jpg.asset.json";
 
 export const images = {
   heroPolo: heroPolo.url,
@@ -34,6 +37,9 @@ export const images = {
   doctorLabcoat: doctorLabcoat.url,
   corporatePolo: corporatePolo.url,
   restaurantStaff: restaurantStaff.url,
+  industryHotels: industryHotels.url,
+  industrySchools: industrySchools.url,
+  industryConstruction: industryConstruction.url,
 };
 
 export const products = [
