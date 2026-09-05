@@ -150,7 +150,7 @@ export const industries = [
       "Color-coded department system",
     ],
     placeholder: "INDUSTRY_HOSPITALS",
-    image: images.lineup,
+    image: images.doctorLabcoat,
   },
   {
     emoji: "🏭",
@@ -179,7 +179,7 @@ export const industries = [
       "Custom embroidery standard",
     ],
     placeholder: "INDUSTRY_CORPORATE",
-    image: images.heroPolo,
+    image: images.corporatePolo,
   },
   {
     emoji: "🍽",
@@ -193,7 +193,7 @@ export const industries = [
       "Complete team uniform sets",
     ],
     placeholder: "INDUSTRY_RESTAURANTS",
-    image: images.badge,
+    image: images.restaurantStaff,
   },
   {
     emoji: "🎓",
