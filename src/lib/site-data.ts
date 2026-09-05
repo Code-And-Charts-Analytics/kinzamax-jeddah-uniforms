@@ -62,7 +62,7 @@ export const products = [
       "Double-breasted chef jacket with piping detail and button options. Cotton or poly blend. Name embroidery available.",
     specs: ["240GSM Cotton", "XS-4XL", "7-10 days"],
     placeholder: "PRODUCT_CHEF_JACKET",
-    image: images.flatlay,
+    image: images.chefJacket,
   },
   {
     category: "Healthcare",
@@ -71,7 +71,7 @@ export const products = [
       "V-neck scrub top and matching trousers. Antimicrobial fabric option. Color-coded by department. Moisture-wicking.",
     specs: ["200GSM Poly-Cotton", "XS-6XL", "7-10 days"],
     placeholder: "PRODUCT_MEDICAL_SCRUBS",
-    image: images.flatlay,
+    image: images.nurseScrubs,
   },
   {
     category: "Safety",
@@ -80,7 +80,7 @@ export const products = [
       "EN 471 and SASO compliant hi-visibility vest with reflective strips, multiple pockets, and KMAX branded label.",
     specs: ["120GSM Polyester", "S-4XL", "5-7 days"],
     placeholder: "PRODUCT_HIVIS_VEST",
-    image: images.flatlay,
+    image: images.hivisVest,
   },
   {
     category: "Healthcare",
@@ -89,7 +89,7 @@ export const products = [
       "Full-length white lab coat with four pockets, button front, and custom embroidery. Cotton or poly blend.",
     specs: ["200GSM Cotton", "XS-4XL", "7-10 days"],
     placeholder: "PRODUCT_LAB_COAT",
-    image: images.lineup,
+    image: images.labCoat,
   },
   {
     category: "Education",
@@ -107,7 +107,7 @@ export const products = [
       "Formal dark navy security jacket with epaulettes, badge panel, and brass buttons. Professional and authoritative.",
     specs: ["260GSM Twill", "S-4XL", "10-14 days"],
     placeholder: "PRODUCT_SECURITY_JACKET",
-    image: images.heroPolo,
+    image: images.securityJacket,
   },
 ];
 
