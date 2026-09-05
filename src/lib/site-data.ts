@@ -141,7 +141,7 @@ export const industries = [
       "Spa and wellness teams",
     ],
     placeholder: "INDUSTRY_HOTELS",
-    image: images.flatlay,
+    image: images.industryHotels,
   },
   {
     emoji: "🏥",
@@ -170,7 +170,7 @@ export const industries = [
       "SASO compliant PPE",
     ],
     placeholder: "INDUSTRY_CONSTRUCTION",
-    image: images.factory,
+    image: images.industryConstruction,
   },
   {
     emoji: "🏢",
@@ -213,6 +213,6 @@ export const industries = [
       "Bulk pricing available",
     ],
     placeholder: "INDUSTRY_SCHOOLS",
-    image: images.stitch,
+    image: images.industrySchools,
   },
 ];
