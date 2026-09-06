@@ -62,7 +62,7 @@ export function Hero() {
 
         <div className="mt-14 grid grid-cols-2 border-t border-white/10 lg:grid-cols-4">
           {[
-            ["10+", "Years in Business"],
+            ["10", "Years in Business"],
             ["500k+", "Garments Delivered"],
             ["100%", "In-House Jeddah Plant"],
             ["7–14", "Days Turnaround"],
