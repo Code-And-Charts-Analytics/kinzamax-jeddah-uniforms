@@ -1,17 +1,11 @@
-import heroPolo from "@/assets/hero-polo.jpg.asset.json";
 import heroKnolling from "@/assets/hero-knolling.jpg.asset.json";
-import lineup from "@/assets/garment-lineup.jpg.asset.json";
 import stitch from "@/assets/stitch-macro.jpg.asset.json";
 import badge from "@/assets/badge-stitching.jpg.asset.json";
 import flatlay from "@/assets/collection-flatlay.jpg.asset.json";
-import factory from "@/assets/factory-floor.jpg.asset.json";
-import chefJacket from "@/assets/product-chef-jacket.jpg.asset.json";
 import hivisVest from "@/assets/product-hivis-vest.jpg.asset.json";
 import labCoat from "@/assets/product-lab-coat.jpg.asset.json";
 import securityJacket from "@/assets/product-security-jacket.jpg.asset.json";
-import stitchTriple from "@/assets/stitch-triple-macro.jpg.asset.json";
 import kmaxLabel from "@/assets/kmax-label-macro.jpg.asset.json";
-import nurseScrubs from "@/assets/lifestyle-nurse-scrubs.jpg.asset.json";
 import doctorLabcoat from "@/assets/lifestyle-doctor-labcoat.jpg.asset.json";
 import corporatePolo from "@/assets/lifestyle-corporate-polo.jpg.asset.json";
 import restaurantStaff from "@/assets/lifestyle-restaurant-staff.jpg.asset.json";
@@ -20,20 +14,20 @@ import industrySchools from "@/assets/industry-schools.jpg.asset.json";
 import industryConstruction from "@/assets/industry-construction.jpg.asset.json";
 
 export const images = {
-  heroPolo: heroPolo.url,
+  heroPolo: "/hero-polo.jpg",
   heroKnolling: heroKnolling.url,
-  lineup: lineup.url,
+  lineup: "/garment-lineup.jpg",
   stitch: stitch.url,
   badge: badge.url,
   flatlay: flatlay.url,
-  factory: factory.url,
-  chefJacket: chefJacket.url,
+  factory: "/factory-floor.jpg",
+  chefJacket: "/product-chef-jacket.jpg",
   hivisVest: hivisVest.url,
   labCoat: labCoat.url,
   securityJacket: securityJacket.url,
-  stitchTriple: stitchTriple.url,
+  stitchTriple: "/stitch-triple-macro.jpg",
   kmaxLabel: kmaxLabel.url,
-  nurseScrubs: nurseScrubs.url,
+  nurseScrubs: "/lifestyle-nurse-scrubs.jpg",
   doctorLabcoat: doctorLabcoat.url,
   corporatePolo: corporatePolo.url,
   restaurantStaff: restaurantStaff.url,

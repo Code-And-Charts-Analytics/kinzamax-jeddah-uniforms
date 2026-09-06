@@ -26,7 +26,7 @@ export function Hero() {
         <div className="flex items-center gap-4">
           <span className="h-px w-12 bg-brand-orange" />
           <p className="text-[11px] font-bold tracking-[3px] text-brand-orange uppercase">
-            Jeddah, KSA · Est. 1977 · 47 Years of Craft
+            Jeddah, KSA · Est. 2014 · 10 Years of Craft
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export function Hero() {
 
         <div className="mt-14 grid grid-cols-2 border-t border-white/10 lg:grid-cols-4">
           {[
-            ["47+", "Years Heritage"],
+            ["10", "Years in Business"],
             ["500k+", "Garments Delivered"],
             ["100%", "In-House Jeddah Plant"],
             ["7–14", "Days Turnaround"],

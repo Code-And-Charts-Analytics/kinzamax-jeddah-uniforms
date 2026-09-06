@@ -1,14 +1,20 @@
 import { Reveal } from "./Reveal";
 import { SectionTag } from "./Blocks";
 import { cn } from "@/lib/utils";
+import petromin from "@/assets/client-petromin.png.asset.json";
+import radwa from "@/assets/client-radwa.png.asset.json";
+import suzuki from "@/assets/client-suzuki.png.asset.json";
+import pepsi from "@/assets/client-pepsi.png.asset.json";
+import trelli from "@/assets/client-trelli.png.asset.json";
+import stc from "@/assets/client-stc.png.asset.json";
 
 export const clients: { name: string; logo?: string }[] = [
-  { name: "Client One" },
-  { name: "Client Two" },
-  { name: "Client Three" },
-  { name: "Client Four" },
-  { name: "Client Five" },
-  { name: "Client Six" },
+  { name: "Petromin", logo: petromin.url },
+  { name: "Radwa", logo: radwa.url },
+  { name: "Suzuki", logo: suzuki.url },
+  { name: "Pepsi", logo: pepsi.url },
+  { name: "Trelli", logo: trelli.url },
+  { name: "stc", logo: stc.url },
 ];
 
 export function ClientsSection({ light = false }: { light?: boolean }) {
@@ -35,7 +41,7 @@ export function ClientsSection({ light = false }: { light?: boolean }) {
                     src={client.logo}
                     alt={`${client.name} logo`}
                     loading="lazy"
-                    className="max-h-16 w-auto object-contain"
+                    className="max-h-16 max-w-full w-auto object-contain"
                   />
                 ) : (
                   <span className="text-center text-[11px] font-bold tracking-brand text-muted-text uppercase">
