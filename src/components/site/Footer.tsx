@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/kmax-logo-white.png.asset.json";
+import logoAsset from "@/assets/kmax-logo.png.asset.json";
 
 const navigation = [
   ["Home", "/"],

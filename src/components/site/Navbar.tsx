@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
+import logoAsset from "@/assets/kmax-logo.png.asset.json";
 
 const links = [
   { label: "Home", to: "/" },
@@ -26,10 +27,14 @@ export function Navbar() {
         <Link
           to="/"
           onClick={() => setOpen(false)}
-          className="flex items-baseline text-lg font-bold tracking-[3px] text-white uppercase"
+          className="flex items-center"
+          aria-label="KINZAMAX home"
         >
-          Kinzamax
-          <span className="ml-1.5 inline-block h-2 w-2 rounded-full bg-brand-orange" />
+          <img
+            src={logoAsset.url}
+            alt="KINZAMAX KMAX logo"
+            className="h-10 w-auto"
+          />
         </Link>
 
         <ul className="hidden items-center gap-9 lg:flex">
