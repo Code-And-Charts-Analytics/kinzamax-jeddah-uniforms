@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
+import logoAsset from "@/assets/kmax-logo.png.asset.json";
 
 const links = [
   { label: "Home", to: "/" },
